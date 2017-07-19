@@ -1,0 +1,136 @@
+I. Interpreters and compilers
+	A. Interpreters compile and executer simultaneously with every line
+		1.Source code, to Interpreter, to output
+	B Compilers make an object file, then execute the object file
+		1.Source code, to compiler, to object code, to executor, to output
+II. Token: another way to say a word in coding like in natural language
+
+Chapter 2
+
+I. To find datatype of variable: type(var)
+II. # for block quotes, dont use ''' or """
+III. 42,010 !- 42010
+	A. 42,010 read as 42 8
+		i. the 010 part is interpreted as an octal. so 010 is 8, 011 is 16
+IV. type(x) = reveals data type
+		type("Hello world") can be used in place of print() to print strings in term
+V. Floats are decimals in python (no doubles I assume)
+VI. Enclose long strs in parent:
+	A.string = ("This is a very long string that you can imagine "
+       "going on and on...")
+	B. Strings can be enclosed in " ", ' ', or ''' or """
+	C. Long strings that span several lines: """ """/ ''' '''
+		C.print(""" Hello my name is Dolly
+		wacho name """)
+		D. """Hello my name is Sally
+		wacho name'''
+		E. weird = "hello"
+		print('this is ',weird,'') (weird becomes singled out , have to put
+			commas to separate quotes from variable
+V.Type conversion functions: int(), float()
+VI. Truncation happens towards 0 on the number line( i thought negative goes more negative wise left?)
+VII. str("hello"): run time error because function expects number,  no letters. Interesting
+		A. This is valid: str("50")
+VIII. = <- assignment token
+VIV: len() check length
+VV. : / float division
+VVI.: // integer division
+VVII: Exponents are right to left-read
+	A. print(2 ** 3 ** 2)  # so this goes right to left
+
+Chapter 3
+III.
+A.Types of Errors
+  	1.Runtime Errors
+			i. Divide by zero
+			ii.Infinite loop
+			iii. concatenating differing data types
+			iv.overflow error
+			v.floating point error
+
+
+		2. Syntax Errors
+		3.Semantic Errors (logic errors)
+B. 90% of time you'll get: ParseError (a syntax), TypeError, NameError, or ValueError
+C. Class is in PascalCase
+D. Long math: # Instead of writing a line like this:
+		1. # Write it like this:
+		income = (gross_wages
+       + taxable_interest
+       + (dividends - qualified_dividends)
+       - ira_deduction
+       - student_loan_interest)
+E. Vocab:
+-exception: Another name for a runtime error.
+parse: To examine a program and analyze the syntactic structure.
+
+Chapter 4:IV.
+A.Modules: files or huge blocks of meaningful code (that is like a file)
+	1.A file containing Python definitions and statements intended for use in other Python programs.
+	The contents of a module are made available to the other program by using the import statement.
+B.Loops
+	1. for name in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
+    print("Hi", name, "Please come to my party on Saturday!")
+	2. for i in [0, 1, 2, 3]:      # repeat four times
+    alex.forward(50)
+    alex.left(90)
+	3. for i in range(4):
+    alex.forward(50)
+C. Range()
+	1. range(start,stop+1).
+	   i.range(1,5)  #goes from 1 to 4
+		 ii.print(range(3, 19, 3))  #print from 3 to 6 to 9 and so on
+C. Zero- based indexing: the computer science idea of starting at 0
+D. Use import math for things like pow. math.pow(is how it is written)
+E.random.random() (review this sa little more in chapter 4)
+	1.random()
+			i. makes a floating point number
+			ii. random() + 5 = "random number"
+	2.import random
+  	prob = random.random()
+  	result = prob * 5
+  	print(result)
+
+		1.13381936176
+
+	diceThrow = random.randrange(1, 7)       # return an int, one of 1,2,3,4,5,6
+	print(diceThrow)
+
+F. Vocab
+	1.Attribute: state or value of an object
+	2.Canvas: surface where drawing takes place in window
+	3. invoke: invoking a method
+
+Chapter 5
+VII.
+A. Actual parameters are passed into a functions formal parameters
+B.Retrieve docstring: type <function_name>.__doc__
+	i. Retrievable at runtime
+C. Function call is also called function invocation
+D. print(max(7, 11))  #this would return 11
+E. Procedure: hunk that doesnt return value
+F.A fruitful function returns a product
+G.Lifetime: term used to describe for how long a variable exists
+H.Make sure all declared variables are done in some function, not global.
+	Considered bad practice
+I.Shadowing:
+	1.Means that when local variable has same name as global variable, local
+	will be found first, so global variable cannot be accessed
+J.Functional decomposition: Breaking problems into smaller bits
+K.Generalization: technique to solve coding problems, seeing big picture
+	1. Realizing that a square is just a type of rectangle
+L.Abstraction: mental chunking
+M. Main is not required by Python, unlike C++ and Java. But it good to user
+N. the if main thing (if __name__ = "main") run program
+	1. every module (file) contains a name. This special name variable has a comparable
+	"this" that is found as "main". "Main" replaces the name for a module only when
+	you RUN the program itself. If, on the other hand, you are importing the program
+	in question to another program, the NAME variable of THAT input module will not
+	be recognized as main. so when you run the program containing the mention of the input file,
+	the interpreter will look at the input file, and potentially RUN the main file
+	FOR THAT PROGRAM. YOU DONT WANT THIS. if the if statement was never in the input file, the main program
+	AND home program (that you originally run) WILL RUN. So the if statement in input file
+	PREVENTS the INPUT main from running, and allows just the originally ran program to run.
+	The main
+	2.This alludes to something called selection. taught later.
+O. Incremental development: doing little bits of code at a time to minimize debugging
