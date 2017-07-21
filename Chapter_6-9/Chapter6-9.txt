@@ -101,3 +101,59 @@ F.RGB Color Model
   2. Red goes up in intensity from 0 to 255, green, blue, yellow, and magenta
   3.Image module defines two classes Image and Pixel.
   4. wn = turtle.Screen()  # turtle is the module and Screen() is a class
+
+
+
+
+  Chapter 9
+
+
+  1. Replacing characters in string
+    replace("o", "l" 1)   #get anything with o, replace with l, for a number of
+    letters. So the 1 would mean for the first o you find, replace it with l.
+    If it is 2, for the first two you find, replace o with l.
+
+  2. Capitalize() capitalizes first letter of a string, even if there is space
+  in between
+
+  3. farm_news = "I have {1} hens and {0} roosters for a total of {2} chickens {}."
+  print(farm_news.format(num_hens, nums_roosters, num_hens + num_roosters))
+
+  I have (num_roosters) and (num_hens) for a total of (num_hens + num_roosters) chickens.
+  # the order of how the {}s print out is based on the order of how the variables are put
+  into the farm_news.format thing
+
+  #num1 + num2 makes a new variable, so
+
+  #the argument thing with redefining variables in a parameter doesn't work because
+  its an issue with formal and actual parameters.
+
+  format(n = num_roosters + num_hens) # the variable n is not passed into function.
+  The VALUE of variable n is passed in. so the variable n can't be seen by the other
+  parameters.
+
+  A string is immutable, you can't add a letter to the same letter of a string.
+  string var = "ball"
+  s[0] = "C"
+  print(s)
+
+  4. s = "Ball"
+  new_s = "C" + s[1:]
+  print(s)
+  print(new_s)
+
+
+  output:
+  Ball
+  Call
+
+  go spot go
+
+  [-1: -6: -1]
+  output = oG to
+
+  An empty string is a subset of any string
+  print('' in 'apple')
+
+
+  print("Go" * 6)  #prints go 6 times
