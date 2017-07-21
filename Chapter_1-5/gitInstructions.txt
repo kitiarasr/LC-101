@@ -1,0 +1,3 @@
+
+
+git commit -a -m "Put text here"  # add all changes (-a), and attach message(-m).

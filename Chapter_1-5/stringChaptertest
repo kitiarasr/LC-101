@@ -1,0 +1,30 @@
+
+
+//The whole string is considered, it doesnt just stop
+
+print("da" < "db")  True
+
+
+print("da" == "db") d's are compared, condition is true, so then a and bs are compared,
+causing condition to go false
+print("da" < "dA")  False, because d is not less than d
+print("da" < "Da") False, second letters aren't checked
+print("daA" < "dAa") keeps checking letters until flagged false.
+
+It's like it ignores if its equal, and if condition is met ,
+
+lowercase = 96
+capital = 65
+
+
+python rocks
+print(s[2] + s[-5])
+
+#-5 is "s" to "k" to "c" to "o" to "r"
+
+list = "hello world"
+print(list[-1::-1])
+
+Quick notes for colors:
+Close we get to 0, the darker color gets, all the way to black.
+To 255 is lightest. If RGB are all 255, we get white
