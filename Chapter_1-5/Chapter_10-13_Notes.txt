@@ -1,0 +1,44 @@
+Chapter 10
+
+Collection data types: strings and lists
+can use + for strings
+
+alist = ['a', 'b', 'c', 'd', 'e', 'f']
+alist[1:2] = ['x', 'y','z',100]
+print(alist)
+
+list3 = ['a', 'b', 'c', 'd', 'e', 'f']
+list3[1] = ['x', 'y','z',100]
+print(list3)   #this line actually adds the entire list itself to the list, unlike the other ones
+
+If you add a :, the stuff you add to a list is singular items, but without the : ([4], then whole
+list is added)
+list2 = ['a', 'b', 'c', 'd', 'e', 'f']
+list2[1:3] = ['x', 'y','z',100]
+print(list2)
+
+
+alist = [a, b, f]
+alist[1:1] = [b, c]
+print(alist)
+
+alist2 = [a, d, f]
+alist[1:0] = [b,c]
+print(alist)   # these two samples prints the same, [a,b,c,d,f]
+
+
+#below we try to add a single 1 to list, but this results in an error. only works
+if you are not using :. The item must be "iterable" in order to be assigned with
+range technique (:).
+
+alist = ["Happy", "Friday"]
+alist[1] = 1
+print(alist)
+
+alist = ["Happy", "Friday"]
+alist[1:1] = "lauchcode"
+print(alist)
+
+alist = ["Happy", "Friday"]
+alist[1:1] = 5  #error because you only have 1 item, you need to have a list of multiple items
+print(alist)

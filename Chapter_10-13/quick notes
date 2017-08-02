@@ -1,0 +1,80 @@
+A. A list within a list is termed as nested
+    i. This list within a list is called a sublist
+B. How to index into a sublist: list[x][y]
+C. del a[1] : this is the syntax to delete things from list, can also use slicer for del.
+D. Remove stuff from list:
+    i. alist = ['a', 'b', 'c', 'd', 'e', 'f']
+    alist[1:3] = []
+    print(alist)
+E.Insert stuff in a list
+   i. index into list and place a char into the list:
+   alist = ['a', 'd', 'f']
+   alist[1:1] = ['b', 'c']
+   output: ['a', 'b', 'c', 'd', 'f']
+F. in and not in check for membership in list
+  i. print("apple" in fruit)   #fruit being a list
+     output: true
+G. .Append adds to end of list. You can append to list even if its empty.
+H. .count counts the occurrence of something in list
+I. pop() pops the last thing on the list off
+    i. pop(item) pops that particular item off
+J. reverse() reverses the order of the list
+K. Mutator returns nothing
+L. Hybrid returns something
+M. More methods: remove, sort, insert
+    i. insert(index, var)
+    ii.remember that methods like these return nothing
+    iii. alist = [4, 2, 8, 6, 5]
+         alist = alist.pop(0)
+         output: 4
+         -cool because you can pop a specific item and set it to  a var
+N.  range(len(numbers)) : great way to use length of list to loop
+O.Concatenation makes a new list, but appending adds to the list
+P.more_fruit = fruit + ["kiwi"] # this concatenates two lists, can't do
+fruit + 999
+Q.a is b: Find out if two variables refer to same object using a is b.
+R. a var that points to a list is pointing to a collection of references. So a reference
+inside of a list can point to a string, and ANOTHER list CAN contain the same EXACT SAME reference
+to the SAME string.
+S.Aliased: term to describe when a list has more than two vars pointing to it
+   i.safer to avoid aliasing when working with mutables (lists).
+   ii. good with immutables, as they do not change(integers, strings)
+   iii.Python economizes by aliasing immutables all the time. For instance, for strings
+   if you have a reference to a string somehwere else and in a nother place, those two references
+   point to the same string
+T.Easiest way to clone a list is to use slicing operator
+   i. Slicing creates a new list
+   alist = [4, 2, 8, 6, 5]
+   blist = alist #you're cloning a new list
+U. Subtle problem with setting stuff to making a list:
+   iorig_list = [45, 76, 34, 55]
+   print(orig_list * 3)
+   new_list = [orig_list] * 3
+   [45, 76, 34, 55, 45, 76, 34, 55, 45, 76, 34, 55]   #this makes a list of nums, while other makes list of lists
+   [[45, 76, 34, 55], [45, 76, 34, 55], [45, 76, 34, 55]]
+V. new_list = [orig_list] * 3        #putting brackets around list makes references pass through
+                                      so if you change original list, this reflects in newlist
+   another_list = orig_list * 3      #unlike here, where values are passed in only, not reference to origin list
+
+   orig_list[1] = 99
+
+   [[45, 99, 34, 55], [45, 99, 34, 55], [45, 99, 34, 55]]
+   [45, 76, 34, 55, 45, 76, 34, 55, 45, 76, 34, 55]
+
+W. Side effects are what happen when you modify say a list (based on reference passed in of a list)
+  i. a pure function is just a function that returns a value without modifying anything passed in
+X. There is some evidence that programs that use pure functions are faster to develop and less error-prone than programs
+that use modifiers. Nevertheless, modifiers are convenient at times, and in some cases, functional programs are less efficient.
+We recommend as pure as possible.
+Y. List Comprehension [<expression> for <item> in <sequence> if  <condition>]
+  i.concise way of creating list
+  ii. my_list = [1,2,3,4,5]
+      your_list = [item ** 2 for item in my_list] #im multiplying each value by 2
+      print(your_list)
+      output: [1, 4, 9, 16, 25]
+  iii. alist = [4,2,8,6,5]
+       blist = [num*2 for num in alist if num%2==1]
+       output: [10
+Z.Join and split
+  i.Join uses a separator string to put in between the joining list items
+  ii. split uses a delimiter to break a string into a list of words.

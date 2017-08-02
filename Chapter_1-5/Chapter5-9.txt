@@ -1,0 +1,194 @@
+I.Boolean Chapter 6
+  A.George Boole created boolean algrebra
+  B.True and false are not strings
+  C. Comparison operators: ==, !=, <= >=, do not =>, =<
+  D.logical operators: and, or, not
+  E.x < y < z is permissable, alternative to x < y and y < z
+  F. Conditonal statements, same as saying selection statements
+    i.example includes if and else statements
+    ii.unary selection, just one if
+  G.Chained conditional
+    i. if... elseif.... else
+  H. Can make conditionals after return to avoid typing if
+    i. ex: def func(x, y):
+            return x % y == 0
+
+II. Chapter 7
+A. Exceptions
+  i. message to any function currently executing the program's run-stack
+  ii.Raise: keyword for declare exception
+    a.Make it CapsWords case
+    b.Ideally put error after exception name if an error
+    c. raise ExceptionName
+  iii."Try: except:". You can't write a raise without this, or program crashes
+  iv. Summary: when raise is thrown , program looks into run stack for try excepts.
+  Name of raise must match try except name. Otherwise, error. example shown here:
+    a.
+    def d()
+      if special_error_happened:
+      raise MyError #name is different from zerodivisionerror name. so error
+
+    def main()
+      try:
+          d()
+      except ZeroDivisonError:
+          # execute if a ZeroDivisonError message happened
+    v.Standard exceptions
+      a.Don't need try except for this. already built into python.
+    vi.If condition can be handled with normal flow, don't use exceptions
+      a. Instead of checking division of zero with exception,
+      check if list is 0 for second argument, just check index naturally with condition
+      b. dont use exception to check index is 0 in a list, just do conditional if
+      to see if index of list is 0.
+    vii.
+    try:
+    # List more specific exceptions first, then more general exceptions below it.
+    # Your code should include function calls which might raise exceptions.
+    except ExceptionOne:
+      # If ExceptionOne was raised, then execute this block.
+      except ExceptionTwo:
+    # If ExceptionTwo was raised, then execute this block.
+    else:
+    # If there was no exception then execute this block.
+
+    viii.
+    try:
+
+    except ZeroDivisionError:
+
+    try:
+    finally: //catches exception but  runs anyway
+
+
+    # example, like the criteria for password, one could be caught, or all three
+    could be caught
+
+    What is return do? Return terminates the function, and takes you back to where
+    the function was called.
+
+
+
+B.Runstack
+  i. what keeps track of active function calls while program is executing (im guessing its like stack)
+C.I/O example
+  try:
+      f = open("my_file.txt", "w")
+      try:
+          f.write("Writing some data to the file")
+          finally:    # will do what's below even if there's errors in writing
+          f.close()
+      except IOError: #to handle not finding file
+          print "Error: my_file.txt does not exist or it can't be opened for output."
+
+Chapter 8
+A. range(1, n+1) : # add plus 1 to n to include left out number
+B.While loop is an indefinite loop, best used for validating input,
+C.For loops are definite loops, best for known limit conditions
+C.Continue: used  to skip code below, but go to keep iterating in loop, not leaving the loop.
+D.Break: used to skip code below, but also takes you out of a particular scope, such as loop
+  1. while num <= n:
+	        if num % 2 == 0:
+	            num = num + 1
+	            continue #skips back up to while loop condition, skips whats below
+
+            sum = sum + num
+	          num = num + 1
+
+	    return sum
+E.'\t' tab character: tabs do not depend on lining up of sentence above it.
+F.RGB Color Model
+  1.Black is devoid of any color, while white comprises of all colors at max
+  2. Red goes up in intensity from 0 to 255, green, blue, yellow, and magenta
+  3.Image module defines two classes Image and Pixel.
+  4. wn = turtle.Screen()  # turtle is the module and Screen() is a class
+
+G. Ordinal Value
+  1. ord() = converts char to corresponding decimal value
+  2. chr() = converts decimal value of a char into a char
+  3. s = "python"
+    excl = "!"
+    print(s + excl * 3)
+    output: python!!!
+    i.This is not pythonpythonpython! because multiplication happens first, then addition (concat)
+    ii."Dog" < "Doghouse" = true, because dog is shorter
+H.Indexing
+  1.Negativing indexing starts at [-1]. so -1 is pretty much the inverse of"index 0"
+  2.Indexing returns a string! Even if its a character, its a string with length of 1
+J.Slice
+  1.Slice: subset of a string
+  2.[n:m-1]
+  3: [:m-1] prints UP TO m-1
+  4. [n:] prints WHOLE STRING from n to end
+  5. capitalize, strip (returns string with whitespace removed)
+K.Strings are IMMUTABLE (can't change, like an array)
+L.str.format()
+  1. >>> "I have {0} pigs on my farm".format("eight")
+'I have eight pigs on my farm'
+  2. Kind of like the format specifier in c
+  3. farm_news = "I have {0} hens and {1} roosters, a total of {2} chickens."
+M. Multiplication of string and number
+  1. s = "python rocks"
+  print(s[1] * s.index("n")) # y * 5
+    output= yyyyy
+N. Traversal
+  1. going through a string one character at a time
+
+  print(farm_news.format(num_hens, num_roosters, num_hens + num_roosters))
+
+
+
+
+
+
+  Chapter 9
+
+
+  1. Replacing characters in string
+    replace("o", "l" 1)   #get anything with o, replace with l, for a number of
+    letters. So the 1 would mean for the first o you find, replace it with l.
+    If it is 2, for the first two you find, replace o with l.
+
+  2. Capitalize() capitalizes first letter of a string, even if there is space
+  in between
+
+  3. farm_news = "I have {1} hens and {0} roosters for a total of {2} chickens {}."
+  print(farm_news.format(num_hens, nums_roosters, num_hens + num_roosters))
+
+  I have (num_roosters) and (num_hens) for a total of (num_hens + num_roosters) chickens.
+  # the order of how the {}s print out is based on the order of how the variables are put
+  into the farm_news.format thing
+
+  #num1 + num2 makes a new variable, so
+
+  #the argument thing with redefining variables in a parameter doesn't work because
+  its an issue with formal and actual parameters.
+
+  format(n = num_roosters + num_hens) # the variable n is not passed into function.
+  The VALUE of variable n is passed in. so the variable n can't be seen by the other
+  parameters.
+
+  A string is immutable, you can't add a letter to the same letter of a string.
+  string var = "ball"
+  s[0] = "C"
+  print(s)
+
+  4. s = "Ball"
+  new_s = "C" + s[1:]
+  print(s)
+  print(new_s)
+
+
+  output:
+  Ball
+  Call
+
+  go spot go
+
+  [-1: -6: -1]
+  output = oG to
+
+  An empty string is a subset of any string
+  print('' in 'apple')
+
+
+  print("Go" * 6)  #prints go 6 times

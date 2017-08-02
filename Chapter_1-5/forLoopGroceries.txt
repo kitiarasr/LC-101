@@ -1,0 +1,22 @@
+#PROMPT: skip every third item in grocery list
+
+
+print("-------")
+
+WAY 1:
+#make list skip the third item in the list
+grocery_list = ["apples", "pears" ,"bananas"]
+
+counter = 0
+for var in grocery_list:
+    counter += 1
+    if counter % 3 != 0:
+        print(var)
+----------------------------------------------
+WAY 2:
+#make list skip the third item in the list
+grocery_list = ["apples", "pears" ,"bananas"]
+size = len(grocery_list)
+for var in range(size):
+    if var % 3 != 0:
+        print(grocery_list[var-1])
