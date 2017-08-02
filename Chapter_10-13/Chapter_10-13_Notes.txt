@@ -42,3 +42,13 @@ print(alist)
 alist = ["Happy", "Friday"]
 alist[1:1] = 5  #error because you only have 1 item, you need to have a list of multiple items
 print(alist)
+
+
+a and b point to the same string because python tries to be efficient and makes
+the pointers point to the same string for you. This is not the case with lists.
+even if two lists contain the same values, lists will be pointed by different pointers.
+
+a = "banana"
+b = "banana"
+print(a == b)
+print(a is b)

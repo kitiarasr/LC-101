@@ -81,7 +81,7 @@ C.I/O example
           print "Error: my_file.txt does not exist or it can't be opened for output."
 
 Chapter 8
-A. range(1, n+1) : # add plus 1 to n to include left out number
+A. range(1, n-1)
 B.While loop is an indefinite loop, best used for validating input,
 C.For loops are definite loops, best for known limit conditions
 C.Continue: used  to skip code below, but go to keep interating in loop, not leaving the loop.
@@ -102,7 +102,15 @@ F.RGB Color Model
   3.Image module defines two classes Image and Pixel.
   4. wn = turtle.Screen()  # turtle is the module and Screen() is a class
 
-
+G.Operations on Strings
+  1. Illegal
+    imessage - 1
+    "Hello" / 123
+    message * "Hello"
+    "15" + 2
+  2.legal
+    "the" + "cat"
+    
 
 
   Chapter 9
